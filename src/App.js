@@ -21,6 +21,12 @@ function App() {
     )
   );
 
+  state = {
+    articles: []
+  }
+
+
+
   return <RouterProvider router={router} />;
 }
 
