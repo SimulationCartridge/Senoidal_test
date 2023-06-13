@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import {
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from "react-router-dom";
 import Root from "../src/components/Root/root.js";
 import Home from '../src/components/Pages/home.js'
@@ -11,23 +10,19 @@ import "./App.css";
 
 
 
-function App() {
-  
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Root />}>
-        <Route index element={<Home />}/>
-      </Route>
-    )
-  );
+class App extends Component {
 
-  state = {
-    articles: []
+  render() {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Root />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </Router>
+    );
   }
-
-
-
-  return <RouterProvider router={router} />;
 }
 
 export default App;

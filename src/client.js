@@ -2,6 +2,6 @@ import * as contentful from 'contentful';
 
 
 export const client = contentful.createClient({
-    space: process.env.REACT_APP_SPACE_ID,
-    accessToken: process.env.REACT_APP_ACCESS_TOKEN
+    space: 'qxfvze5d2jit',
+    accessToken: 'yNKNPy_7VQzZglU2aKOyflcdwgEO3ZnhHB0cxosDzVU'
 });
