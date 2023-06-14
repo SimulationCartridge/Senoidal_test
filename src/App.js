@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
+import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements
 } from "react-router-dom";
 import Root from "../src/components/Root/root.js";
-import Home from '../src/components/Pages/home.js'
+import Home from '../src/components/Pages/home.js';
+import Archive from "./components/Archivo/archive.js";
 import "./App.css";
 
+
+const router = createBrowserRouter (createRoutesFromElements(
+  <Route path="/" element={<Root />}>
+    <Route path="inicio" element={<Home />} />
+    <Route path="archivo" element={<Archive />} />
+  </Route>
+))
 
 
 class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Root />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </Router>
-    );
+    <RouterProvider router={router} />      
+    )
   }
 }
 

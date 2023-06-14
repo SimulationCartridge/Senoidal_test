@@ -6,16 +6,18 @@ const Post = ({article}) => {
     console.log(article)
     const { titles, images, content} = article.fields
     const postDescription = marked(content)
+    
+    
     return (
-    <div className="´post-card">
-        <div className='image-container'>
-        {images && <img className="post-image" src={images.fields.file.url} />}
+    <div className='post'>
+        <div className="image-container">
+        {images && <img classname="post-image" src={images.fields.file.url} alt={titles} />}
             <div className='overlay'>
-            <h2 classname="overlay-text">
+            <h2 className='overlay-text'>
                 {titles}
             </h2>
             </div>
-        <section className="content" dangerouslySetInnerHTML={{ __html: postDescription }} />
+        <section className='content' dangerouslySetInnerHTML={{ __html: postDescription }} />
         </div>
     </div>
   )

@@ -25,7 +25,7 @@ function Home() {
       <section>
         <Welcome />
       </section>
-      <section >
+      <section>
         <Posts posts={articles} />
       </section>
       <footer>
