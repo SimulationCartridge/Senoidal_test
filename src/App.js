@@ -1,27 +1,28 @@
-import React, { Component } from "react";
-import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements
-} from "react-router-dom";
+import React from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Root from "../src/components/Root/root.js";
-import Home from '../src/components/Pages/home.js';
-import Archive from "./components/Archivo/archive.js";
+import Home from "../src/components/Pages/home.js";
+import Archive from "../src/components/Archivo/archive.js";
 import "./App.css";
+import Nosotros from "../src/components/Pages/nosotros.js";
+import NotFound from "./components/Pages/notfound.js";
+import Navigation from "./components/Navigation/navigation.js";
 
+function App() {
+  return (
+    <Router>
 
-const router = createBrowserRouter (createRoutesFromElements(
-  <Route path="/" element={<Root />}>
-    <Route path="inicio" element={<Home />} />
-    <Route path="archivo" element={<Archive />} />
-  </Route>
-))
+      <Navigation />
 
-
-class App extends Component {
-
-  render() {
-    return (
-    <RouterProvider router={router} />      
-    )
-  }
+      <Routes>
+      <Route path="/" element={<Root />} />
+      <Route path="/inicio" element={<Home />} />
+      <Route path="/archivo" element={<Archive />} />
+      <Route path="/nosotros" element={<Nosotros />} />
+      <Route path="*" element ={<NotFound />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

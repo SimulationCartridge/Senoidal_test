@@ -19,9 +19,6 @@ function Home() {
 
   return (
     <div>
-      <nav>
-        <Navigation />
-      </nav>
       <section>
         <Welcome />
       </section>

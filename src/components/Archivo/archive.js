@@ -1,12 +1,13 @@
 import React from 'react';
+import Navigation from '../Navigation/navigation';
 
 
 function Archive  ()  {
 
   return (
-    <main>
+    <div>
       <h1>Crear nuevo post</h1>
-    </main>
+      </div>
   )
 };
 
