@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Welcome from '../Welcome/welcome';
-import Navigation from '../Navigation/navigation';
 import Footer from '../Footer/footer';
 import Posts from '../Posts/posts';
 import {client} from '../../client'

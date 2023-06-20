@@ -178,3 +178,61 @@ h1{
   position: relative;
   
 }
+
+
+  
+/**************Footer**************/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.contact-info,
+.social-media {
+  text-align: center;
+}
+
+
+
+.instagram-icon {
+  width: 24px; 
+  height: 24px; 
+  background-image: url('/src/components/Images/instaIcon.png');
+  background-size:cover; 
+  align-items: center;
+}
+
+
+
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-image {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.blog-post-content {
+  margin-bottom: 20px;
+}
+
+.blog-post-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blog-post-description {
+  line-height: 1.5;
+}
