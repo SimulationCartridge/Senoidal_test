@@ -3,8 +3,11 @@ import Welcome from '../Welcome/welcome';
 import Footer from '../Footer/footer';
 import Posts from '../Posts/posts';
 import {client} from '../../client'
+import BlogList from '../Blog/BlogList';
 
 function Home() {
+
+ 
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
@@ -14,7 +17,7 @@ function Home() {
         setArticles(response.items);
       })
       .catch(console.error);
-  }, []);
+  }, []); 
 
   return (
     <div>
@@ -22,7 +25,8 @@ function Home() {
         <Welcome />
       </section>
       <section>
-        <Posts posts={articles} />
+        <BlogList />
+        {/* <Posts posts={articles} /> */}
       </section>
       <footer>
         <Footer />

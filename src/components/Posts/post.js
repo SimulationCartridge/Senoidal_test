@@ -1,28 +1,30 @@
 import React from 'react';
 import { marked } from 'marked';
+import { Link } from 'react-router-dom/dist';
 
 
 const Post = ({article}) => {
-    console.log(article)
     const { titles, images, content} = article.fields
     const postDescription = marked(content)
     
     
     return (
-    <div className='post'>
-        <div className="image-container">
-        {images && <img classname="post-image" src={images.fields.file.url} alt={titles} />}
-            <div className='overlay'>
-            <h2 className='overlay-text'>
-                {titles}
-            </h2>
-            </div>
-        <section className='content' dangerouslySetInnerHTML={{ __html: postDescription }} />
+        <div className="post">
+          <div className="image-container">
+            {images && (
+              <img className="post-image" src={images.fields.file.url} alt={titles} />
+            )}
+            <Link to={`/archivo/${titles}`} className="overlay">
+              <h2 className="overlay-text">{titles}</h2>
+            </Link>
+            <section
+              className="content"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </div>
         </div>
-    </div>
-  )
-}
-
+      );
+    };
 
 
 
