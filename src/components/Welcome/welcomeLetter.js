@@ -1,19 +1,17 @@
+
 import React, { useEffect, useState } from 'react';
-import WelcomeLetter from './welcomeLetter';
 
 
-const Welcome = () => {
+const WelcomeLetter = () => {
+  const [showText, setShowText] = useState(false);
 
-    const [showText, setShowText] = useState(false);
-  
-    useEffect(() => {
-      setShowText(true);
-    }, []);
+  useEffect(() => {
+    setShowText(true);
+  }, []);
 
   return (
-    <div className='contenedor'>
-
-      {showText && (
+    <div>
+     {showText && (
     <h2 className="welcome">
       <span className="banner-text">
         {'Senoidal'.split('').map((letter, index) => (
@@ -27,10 +25,9 @@ const Welcome = () => {
       </span>
     </h2>
   )}
-
-<section className='banner-container'>
-      </section>
     </div>
   );
 }
-export default Welcome;
+export default WelcomeLetter;
+
+

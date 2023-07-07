@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Welcome from '../Welcome/welcome';
 import Footer from '../Footer/footer';
-import Posts from '../Posts/posts';
-import {client} from '../../client'
 import BlogList from '../Blog/BlogList';
 
 function Home() {
 
  
-  const [articles, setArticles] = useState([])
-
-  useEffect(() => {
-    client.getEntries()
-      .then((response) => {
-        console.log(response);
-        setArticles(response.items);
-      })
-      .catch(console.error);
-  }, []); 
-
   return (
     <div>
       <section>
@@ -26,7 +13,6 @@ function Home() {
       </section>
       <section>
         <BlogList />
-        {/* <Posts posts={articles} /> */}
       </section>
       <footer>
         <Footer />

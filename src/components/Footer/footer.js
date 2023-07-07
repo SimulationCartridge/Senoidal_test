@@ -13,6 +13,7 @@ function Footer() {
               <img className="instagram-icon" />
         </ul>
       </div>
+
     </footer>
   );
 }

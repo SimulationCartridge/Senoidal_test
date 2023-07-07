@@ -4,13 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgba(152, 152, 152, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  padding: 20px;
+  padding: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -30,12 +30,13 @@
 .navigation-links{
   display: flex;
   color: black;
+  font-weight: bold;
   text-decoration: none;
 
 }
 
 .navLink{
-font-size: 1.225rem;  
+font-size: 1.5rem;  
 margin-right: 20px;
 text-decoration: none;
 color: black;
@@ -49,7 +50,7 @@ position: relative;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(92, 218, 193);
+  background-color: rgb(141, 232, 214);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -77,26 +78,47 @@ position: relative;
 
 /**************BACKGROUND**************/
 
+.contenedor{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .banner-container{
 	height: 850px;
+  width: 100%;
 	background-image: url('./components/Images/welcome.jpg');
 	background-repeat: no-repeat;
 	background-size: auto;
-	background-position: center;
-  display: flex;
-	align-items: center;
-	justify-content: center;
+	background-position: top;
+  }
+  
+  .welcome{
+    align-items: flex-start;
+    position:absolute;
+    z-index: 999;
+    margin-bottom: 450px;
   }
 
-  
-  .banner-text{
-	color: #fff;
-	font-family: 'Raleway', sans-serif;
-	font-size: 80px;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-align: center;
-  }	
+  .banner-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .banner-text span{
+letter-spacing: 11px;
+background-image: linear-gradient(to right, #6699cc, #336699, #cb88d2); /* Combinación de colores metálicos */
+-webkit-background-clip: text; /* Aplicar el fondo solo al texto (para navegadores webkit) */
+-webkit-text-fill-color: transparent; /* Hacer el texto transparente (para navegadores webkit) */
+background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) */
+}
+    
+
+
 
   @keyframes fadeInLetter {
 	0% {
@@ -112,7 +134,10 @@ position: relative;
   .banner-text span {
 	opacity: 0;
 	animation: fadeInLetter 0.8s ease-in-out forwards;
+  color: black;
   }
+
+
   
 /**************POSTS**************/
 .posts{
@@ -134,8 +159,8 @@ position: relative;
 }
 
 .post-image {
-  width: 100%;
-  height: auto;
+  width: 400px;
+  height: 100%;
 }
 
 .overlay {
@@ -163,22 +188,14 @@ position: relative;
   text-align: center;
 }
 
-.post-content {
-  padding: 10px;
-}
 
-.post-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.titles{
+  text-align: center;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-
-h1{
-  font-size: 4em;
-  position: relative;
-  
-}
-
 
   
 /**************Footer**************/
@@ -187,7 +204,6 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
   padding: 20px;
 }
 
@@ -207,32 +223,3 @@ h1{
 }
 
 
-
-.blog-post-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post-image {
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
-
-.blog-post-content {
-  margin-bottom: 20px;
-}
-
-.blog-post-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.blog-post-description {
-  line-height: 1.5;
-}

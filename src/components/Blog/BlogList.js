@@ -17,49 +17,34 @@ useEffect(() => {
       .catch(console.error);
   }, []); 
   return (
-    <div>
-
-<div id="layout" className="pure-g">
-      <div className="content pure-u-1 pure-u-md-3-4">
-        <div>
-          <div className="posts">
-            <h1 className="content-subhead">Web Dev Blog</h1>
-
+        <div class="posts">
             {blogPosts.map((post) => (
-              <section className="post" key={post.sys.id}>
-                <header className="post-header">
-                  <img src={post.fields.images.fields.file.url} title="" alt={post.fields.titles} width="578" height="291" />
-                  <h2 className="post-title pt-3">{post.fields.title}</h2>
-                  <p className="post-meta">
-                    By <a href="https://thecodeangle.com/" className="post-author">{post.fields.titles}</a> Date <span></span>
-
-                  </p>
-                </header>
-                <div className="post-description">
-                  <p>{post.fields.blogSummary}
-                  </p>
-                  <Link
-                  to={`/archivo/${post.sys.id}`}
-                    className="button button1">
+              <div key={post.sys.id}
+              className='post'>
+                <div  className='image-container'>
+                  <img className="post-image"
+                  src={post.fields.images.fields.file.url} 
+                  alt={post.fields.titles} 
+                   />
+                  <Link 
+                  className='overlay'
+                  to={`/archivo/${post.sys.id}`}>
                     Read More
+                    
+                    <h2
+                  className='overlay-text'>
+                    {post.fields.title}
+                    </h2>
                   </Link>
-                </div>
-              </section>
-            ))}
-          </div>
 
-
-          <div className="footer">
-            <div className="pure-menu pure-menu-horizontal">
-              <div className="pure-menu-item">
-                <a href="http://twitter.com/thecodeangle" className="pure-menu-link">Twitter</a>
+                  <p className='titles'> 
+                    <a>
+                      {post.fields.titles}</a> 
+                  </p>
+                </div> 
               </div>
-            </div>
-          </div>
+            ))}
         </div>
-      </div>
-    </div>
-    </div>
   )
 }
 
