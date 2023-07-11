@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { client } from '../../client'
 import { Link } from 'react-router-dom';
 
-const BlogList = () => {
+const BlogListArchive = () => {
 
 const [blogPosts, setBlogPosts] = useState([])
 
@@ -17,7 +17,8 @@ useEffect(() => {
       .catch(console.error);
   }, []); 
   return (
-        <div class="posts">
+    <section className='fondo'>
+        <div>
             {blogPosts.map((post) => (
               <div key={post.sys.id}
               className='post'>
@@ -45,7 +46,8 @@ useEffect(() => {
               </div>
             ))}
         </div>
+        </section>
   )
 }
 
-export default BlogList
+export default BlogListArchive;
