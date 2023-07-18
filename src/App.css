@@ -78,8 +78,42 @@ position: relative;
   opacity: 1;
  }
 
+ /* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+    padding: 5px;
+  }
+  div .main-container{
+  }
 
-/* Estilos responsive */
+  .logo {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .navLink {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 /**************BACKGROUND**************/
 
@@ -98,13 +132,25 @@ position: relative;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top;
-  position: relative; /* Agregamos posicionamiento relativo al contenedor */
+  position: relative; 
+}
 
-  /* Agregamos el divisor de sección */
-
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .banner-container {
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    background-size: contain;
+    margin-top: 90px;
+  }
 }
 
 
+
+
+
+
+
+/**************Letrero**************/
 
   .welcome{
     align-items: flex-start;
@@ -121,14 +167,12 @@ position: relative;
 
   .banner-text span{
 letter-spacing: 5px;
-background-image: linear-gradient(to right, #6699cc, #336699, #cb88d2); /* Combinación de colores metálicos */
--webkit-background-clip: text; /* Aplicar el fondo solo al texto (para navegadores webkit) */
--webkit-text-fill-color: transparent; /* Hacer el texto transparente (para navegadores webkit) */
-background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) */
+background-image: linear-gradient(to right, #6699cc, #336699, #cb88d2); 
+-webkit-background-clip: text; 
+-webkit-text-fill-color: transparent; 
+background-clip: text; 
 }
     
-
-
 
   @keyframes fadeInLetter {
 	0% {
@@ -147,32 +191,53 @@ background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) *
   color: black;
   }
 
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .welcome {
+    align-items: flex-start;
+    margin-bottom: 100px; /* Ajusta el margen inferior según tus necesidades */
+    margin-top: 10px;
+  }
+
+  .banner-text {
+    font-size: 2.5em; /* Ajusta el tamaño de fuente según tus necesidades */
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
   
 /**************POSTS**************/
-.posts{
+.posts-container{
  width: auto;
  display: flex;
  flex-wrap: wrap;
- justify-content:space-around;
+ justify-content:center;
 }
-
-
 
 .post{
- margin: 50px;
- margin-bottom: 100px;
-}
-
-.image-container{
+  margin: 50px;
+  margin-bottom: 30px;
+ }
+ 
+ .image-container{
   position: relative;
   overflow: hidden;
   border-radius: 5%;
 }
 
+
 .post-image {
   width: 350px;
-  height: 100%;
+  height: auto;
   margin: 0%;
   border: 0%;
 }
@@ -202,7 +267,6 @@ background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) *
   text-align: center;
 }
 
-
 .titles{
   text-align: center;
   font-size: 1rem;
@@ -211,9 +275,204 @@ background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) *
   left: 0;
   right: 0;
   background: linear-gradient(to right, rgba(102, 153, 204, 0.5), rgba(51, 102, 153, 0.5), rgba(203, 136, 210, 0.5));
+  color: black;
 }
 
+
+
+
+@media screen and (max-width: 600px) {
+  .post {
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .titles {
+    font-size: 0.8rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 5px; /* Ajusta el padding según tus necesidades */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/**************Posts Archivo**************/
+.fondo{
+  background-color: #6ab8d5;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.post-archive{
+  margin-top: 125px;
+ }
+ 
+ .image-container-archive{
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+.post-image-archive {
+  width: 500px;
+  height: 100%;
+  margin: 0%;
+  border: 0%;
+}
+
+.overlay-archive{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container-archive:hover .overlay-archive,
+.image-container-archive:active .overlay-archive {
+  opacity: 1;
+}
+
+.overlay-text-archive {
+  font-size: 16px;
+  text-align: center;
+}
+
+.titles-archive{
+  text-align: center;
+  font-size: 1rem;
+  margin: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, rgba(102, 153, 204, 0.5), rgba(51, 102, 153, 0.5), rgba(203, 136, 210, 0.5));
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .post-archive {
+    margin: 10px auto;
+    margin-bottom: 20px;
+  }
+
+  .post-image-archive {
+    width: 100%;
+    height: auto;
+  }
+
+  .titles-archive {
+    font-size: 0.8rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 5px; /* Ajusta el padding según tus necesidades */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************Detail**************/
+.container-detail {
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  margin:200px auto;
+  margin-top: 10px auto;
+}
+
+.blog-post {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-image-full {
+  width: 100%;
+  max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.content {
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .container-detail {
+    margin: 80px auto; /* Ajusta el margen según tus necesidades */
+  }
+
+  .post-image-full {
+    max-height: 150px; /* Ajusta la altura máxima según tus necesidades */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    margin-bottom: 10px;
+  }
+
+  .blog-post {
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+    margin-bottom: 10px;
+  }
+}
+
+
+
   
+
+
+
+
+
+
+
+
+
+
+
+
 /**************Footer**************/
 .footer {
   display: flex;
@@ -268,46 +527,67 @@ background-clip: text; /* Aplicar el fondo solo al texto (propiedad estándar) *
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************Nosotros**************/
+
 .container {
-  width: 100%;
-  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-  margin:200px auto;
-  margin-top: 100px;
+  text-align: center;
+  margin: 0 auto; /* Añadimos margen automático en los lados para centrar horizontalmente */
+  display: flex; /* Utilizamos flexbox para centrar verticalmente */
+  align-items: center; /* Centramos verticalmente */
+  justify-content: center; /* Centramos horizontalmente */
+  height: 100vh; /* Establecemos una altura del contenedor para ocupar toda la pantalla verticalmente */
 }
 
-
-.blog-post {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.post-image-full {
-  width: 100%;
-  max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-h2 {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.content {
-  margin-bottom: 15px;
+h1 {
+  font-size: 24px;
+  color: #333;
 }
 
 p {
-  margin: 0;
+  color: #666;
 }
 
+form {
+  margin-top: 20px;
+}
 
-.fondo{
-  background-color: #6ab8d5;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
-  height: 100%;
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

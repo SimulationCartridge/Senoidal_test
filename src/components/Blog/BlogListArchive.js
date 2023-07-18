@@ -21,24 +21,24 @@ useEffect(() => {
         <div>
             {blogPosts.map((post) => (
               <div key={post.sys.id}
-              className='post'>
-                <div  className='image-container'>
-                  <img className="post-image"
+              className='post-archive'>
+                <div  className='image-container-archive'>
+                  <img className="post-image-archive"
                   src={post.fields.images.fields.file.url} 
                   alt={post.fields.titles} 
                    />
                   <Link 
-                  className='overlay'
+                  className='overlay-archive'
                   to={`/archivo/${post.sys.id}`}>
                     Leer más
                     
                     <h2
-                  className='overlay-text'>
+                  className='overlay-text-archive'>
                     {post.fields.title}
                     </h2>
                   </Link>
 
-                  <p className='titles'> 
+                  <p className='titles-archive'> 
                     <a>
                       {post.fields.titles}</a> 
                   </p>

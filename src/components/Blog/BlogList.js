@@ -17,7 +17,7 @@ useEffect(() => {
       .catch(console.error);
   }, []); 
   return (
-        <div class="posts">
+        <div class="posts-container">
             {blogPosts.map((post) => (
               <div key={post.sys.id}
               className='post'>

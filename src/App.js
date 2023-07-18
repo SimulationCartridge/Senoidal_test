@@ -2,7 +2,6 @@ import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Root from "../src/components/Root/root.js";
 import Home from "../src/components/Pages/home.js";
-import BlogDetails from "./components/Blog/BlogDetails.js";
 import Nosotros from "../src/components/Pages/nosotros.js";
 import NotFound from "./components/Pages/notfound.js";
 import Navigation from "./components/Navigation/navigation.js";

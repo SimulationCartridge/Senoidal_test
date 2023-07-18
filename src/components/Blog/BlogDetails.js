@@ -21,7 +21,7 @@ const BlogDetails = () => {
   }, [id])
 
   return (
-<div class="container">
+<div class="container-detail">
   <section class="blog-post">
     <img className="post-image-full"src={singleBlogPost?.fields?.images?.fields?.file?.url} title="" alt={singleBlogPost?.fields?.titles}  />
     <h2>{singleBlogPost?.fields?.titles}</h2>
