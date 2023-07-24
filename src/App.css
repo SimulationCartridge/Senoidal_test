@@ -9,7 +9,7 @@ body{font-family: 'Quicksand', sans-serif;}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -82,6 +82,7 @@ position: relative;
 @media screen and (max-width: 600px) {
   .main-container {
     flex-direction: column;
+    background-color: black;
     padding: 5px;
   }
 
@@ -95,8 +96,8 @@ position: relative;
   }
 
   .navLink {
-    margin-right: 10px;
-    font-size: 1.2rem;
+    margin-right: 15px;
+    font-size: 1rem;
     justify-content: center;
   }
 }
@@ -121,6 +122,7 @@ position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .banner-container {
@@ -136,9 +138,9 @@ position: relative;
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
   .banner-container {
-    height: 200px; /* Ajusta la altura según tus necesidades */
-    background-size: contain;
-    margin-top: 90px;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    background-size: cover;
+    margin-top: 100px;
   }
 }
 
@@ -158,7 +160,7 @@ position: relative;
   }
 
   .banner-text {
-    font-size: 4.5em;
+    font-size: 8em;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -192,13 +194,13 @@ background-clip: text;
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
   .welcome {
-    align-items: flex-start;
-    margin-bottom: 100px; /* Ajusta el margen inferior según tus necesidades */
-    margin-top: 10px;
+    align-items: center;
+    margin-bottom: 200px; /* Ajusta el margen inferior según tus necesidades */
+    margin-top: 100px;
   }
 
   .banner-text {
-    font-size: 2.5em; /* Ajusta el tamaño de fuente según tus necesidades */
+    font-size: 2.775em; /* Ajusta el tamaño de fuente según tus necesidades */
   }
 }
 
@@ -246,6 +248,7 @@ background-clip: text;
   left: 0;
   width: 100%;
   height: 100%;
+  font-size: 25px;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   display: flex;
@@ -265,13 +268,13 @@ background-clip: text;
   text-align: center;
 }
 
+
+
 .titles{
   text-align: center;
   font-size: 1rem;
+  font-weight: bold;
   margin: 0%;
-  top: 0;
-  left: 0;
-  right: 0;
   background: linear-gradient(to right, rgba(102, 153, 204, 0.5), rgba(51, 102, 153, 0.5), rgba(203, 136, 210, 0.5));
   color: black;
 }
@@ -280,19 +283,30 @@ background-clip: text;
 
 
 @media screen and (max-width: 600px) {
-  .post {
+
+  .post{
     margin: 10px;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 15px;
+   }
 
-  .post-image {
-    width: 100%;
+   .post-image {
+    width: 275px;
     height: auto;
+    margin: 0%;
+    border: 0%;
   }
 
-  .titles {
-    font-size: 0.8rem; /* Ajusta el tamaño de fuente según tus necesidades */
-    padding: 5px; /* Ajusta el padding según tus necesidades */
+  .titles{
+    text-align: center;
+    font-size: 0.775rem;
+    font-weight: bold;
+    margin: 0%;
+  }
+
+  .overlay {
+
+    font-size: 10px;
+
   }
 }
 
@@ -370,20 +384,32 @@ background-clip: text;
 
 @media screen and (max-width: 600px) {
   .post-archive {
-    margin: 10px auto;
-    margin-bottom: 20px;
+    margin: 80px auto;
   }
 
   .post-image-archive {
     width: 100%;
     height: auto;
+    border-radius: 2.5%;
   }
 
   .titles-archive {
-    font-size: 0.8rem; /* Ajusta el tamaño de fuente según tus necesidades */
-    padding: 5px; /* Ajusta el padding según tus necesidades */
+    font-size: 0.7rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+    font-weight: bold;
+    margin: 0%;
   }
+  
+  .post-image-archive {
+    width: 300px;
+    height: auto;
+    margin: 0%;
+    border: 0%;
+  }
+
 }
+
+
 
 
 
@@ -404,7 +430,7 @@ background-clip: text;
 .container-detail {
   width: 100%;
   max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-  margin:200px auto;
+  margin:100px auto;
   margin-top: 10px auto;
 }
 
@@ -431,7 +457,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-p {
+.texto-detail{
   margin: 0;
 }
 
@@ -439,6 +465,8 @@ p {
 @media screen and (max-width: 600px) {
   .container-detail {
     margin: 80px auto; /* Ajusta el margen según tus necesidades */
+    justify-items: center;
+    align-items: center;
   }
 
   .post-image-full {
@@ -448,13 +476,37 @@ p {
   h2 {
     font-size: 1.5rem; /* Ajusta el tamaño de fuente según tus necesidades */
     margin-bottom: 10px;
+   justify-items: center;
+   align-items: center;
+
   }
 
   .blog-post {
     padding: 10px; /* Ajusta el padding según tus necesidades */
     margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+
+  .texto-detail{
+    position: relative;
+    margin: 0;
+
+    border-style:none;
+  }
+  .texto-detail::before {
+    content: "";
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical del fondo desalineado */
+    right: -10px; /* Ajusta la posición horizontal del fondo desalineado */
+    width: 20px; /* Ajusta el ancho del fondo desalineado */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
   }
 }
+
 
 
 
@@ -489,7 +541,7 @@ p {
 .footer-container::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 20%; /* Ajusta la posición izquierda de la línea divisora */
   width: 60%; /* Ajusta el ancho de la línea divisora */
   height: 1px; /* Ajusta el grosor de la línea divisora */
@@ -514,9 +566,18 @@ p {
 .instagram-icon {
   width: 24px; 
   height: 24px; 
+  padding: 0px;
+  margin: 0px;
   background-image: url('/src/components/Images/instaIcon.png');
   background-size:cover; 
   align-items: center;
+}
+
+.instagram-icon, ul {
+  width: 24px; 
+  height: 24px; 
+  padding: 0px;
+  margin: 0px;
 }
 
 
