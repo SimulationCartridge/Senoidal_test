@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Senoidal/static/css/main.3d45f72a.css",
-    "main.js": "/Senoidal/static/js/main.b104170e.js",
-    "static/media/welcome.jpg": "/Senoidal/static/media/welcome.57dace9c7accc82a6637.jpg",
-    "static/media/instaIcon.png": "/Senoidal/static/media/instaIcon.3856b08ada27a1a60a4d.png",
-    "index.html": "/Senoidal/index.html",
-    "main.3d45f72a.css.map": "/Senoidal/static/css/main.3d45f72a.css.map",
-    "main.b104170e.js.map": "/Senoidal/static/js/main.b104170e.js.map"
+    "main.css": "/Senoidal_1/static/css/main.dff5c1f4.css",
+    "main.js": "/Senoidal_1/static/js/main.b104170e.js",
+    "static/media/welcome.jpg": "/Senoidal_1/static/media/welcome.57dace9c7accc82a6637.jpg",
+    "static/media/instaIcon.png": "/Senoidal_1/static/media/instaIcon.3856b08ada27a1a60a4d.png",
+    "index.html": "/Senoidal_1/index.html",
+    "main.dff5c1f4.css.map": "/Senoidal_1/static/css/main.dff5c1f4.css.map",
+    "main.b104170e.js.map": "/Senoidal_1/static/js/main.b104170e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d45f72a.css",
+    "static/css/main.dff5c1f4.css",
     "static/js/main.b104170e.js"
   ]
 }
