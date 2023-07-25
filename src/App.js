@@ -9,7 +9,6 @@ import Navigation from "./components/Navigation/navigation.js";
 //CSS//
 
 import "./App.css";
-import BlogListArchive from "./components/Blog/BlogListArchive.js";
 import Archivo from "./components/Pages/archive.js";
 import ArchivoDetails from "./components/Pages/archiveDetail.js";
 
@@ -25,6 +24,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Root />} />
       <Route path="/inicio" element={<Home />} />
+      <Route path="/senoidal" element={<Home />} />
       <Route path="/archivo/:id" element={<ArchivoDetails />} />
       <Route path="/archivo/" element={<Archivo />} />
       <Route path="/nosotros" element={<Nosotros />} />
